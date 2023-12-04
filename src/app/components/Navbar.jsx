@@ -3,8 +3,10 @@ import Image from 'next/image'
 import { countUsers } from '@/lib/data'
 
 export const Navbar = async () => {
+  //const [length, setLength] = useState(0)
   let lengthString = ''
   const length = await countUsers()
+  //setLength(await countUsers())
 
   if (length < 10) {
     lengthString = `0${length}`

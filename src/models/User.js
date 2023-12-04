@@ -9,6 +9,7 @@ const userSchema = new Schema({
   link1: String,
   link2: String,
   link3: String,
+  idsort: String,
   sorted: { type: Boolean, default: false },
 })
 

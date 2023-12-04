@@ -1,5 +1,4 @@
 import { Inter } from 'next/font/google'
-
 import './globals.css'
 import { Navbar } from './components/Navbar'
 
@@ -12,11 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es-MX">
       <body className={inter.className}>
-        <div className="w-80 h-[32rem] mx-auto rounded-b-lg border-2 shadow-lg shadow-red-500">
-          <Navbar />
-          {children}
+        <div className="grid place-items-center h-screen">
+          <main className="bg-gray-50 rounded-lg shadow-lg shadow-red-500 h-[95vh] w-96">
+            <Navbar />
+            {children}
+          </main>
         </div>
       </body>
     </html>

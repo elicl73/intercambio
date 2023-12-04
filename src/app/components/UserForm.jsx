@@ -16,6 +16,7 @@ export default function UserForm() {
     link1: '',
     link2: '',
     link3: '',
+    idsort: '',
     sorted: false,
   })
 
@@ -25,10 +26,12 @@ export default function UserForm() {
 
     if (result.msg === 'User Created') {
       router.push('/subscribed')
+      router.refresh()
     }
 
     if (result.msg === 'Duplicate User') {
       router.push('/duplicateuser')
+      router.refresh()
     }
   }
 
@@ -139,7 +142,7 @@ export default function UserForm() {
 
       <button
         type="submit"
-        className="flex flex-row justify-center items-center gap-4 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
+        className="flex flex-row justify-center items-center gap-4 text-white bg-green-700 hover:bg-green-800 focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center shadow-lg shadow-gray-600"
       >
         <span>ENVIAR</span>
         <Image src="/gift.png" width={30} height={30} alt="Icon regalo" />
